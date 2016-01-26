@@ -1,0 +1,24 @@
+#include "Strategy.h"
+#include "Generator.h"
+#include <cmath>
+
+/*
+AffineStrategy
+*/
+
+/*
+double linear_interpolate(double a, double b, double t){
+	return (1. - t)*a + t*b;
+}
+*/
+
+//TODO: find a way to use PerlinNoise & co in Strategy & co
+//SOLUTION1: using namespaces, with two headers, one "hidden" containing _tab and _size, they will be publics but hidden from the public
+//SOLUTION2: using pointers in methods:
+// http://stackoverflow.com/questions/13844129/friend-class-with-inheritance
+void AffineStrategy1D::execute(PerlinNoise1D& perlin, double factor){
+  double* t = perlin._tab;
+  for(int i=0 ; i<perlin._size-1 ; ++i){
+    t[i] = (1. - factor)*t[i] + t[i+1];
+  }
+}

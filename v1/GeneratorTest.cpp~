@@ -1,0 +1,10 @@
+#include "Generator.h"
+#include "Strategie.h"
+
+using namespace std;
+
+int main(int argc, char** argv){
+  PerlinNoise p1D = new PerlinNoise1D(0, 4);
+  p1D.generate();
+  return 0;
+}

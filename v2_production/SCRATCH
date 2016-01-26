@@ -1,0 +1,4 @@
+BUGS:
+	in PerlinNoise, Strategy::execute() is called, not Strategy1D::execute()
+	in StrategyLinear, difference tends to be too small to be seen, needs a big factor to see the difference
+	

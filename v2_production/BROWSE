@@ -1,0 +1,95 @@
+[ebrowse-hs "ebrowse 5.0" " -x" () ()][ebrowse-ts [ebrowse-cs "PerlinNoise" () 0"Generator.hpp" "class PerlinNoise{" 131"Generator.cpp" ]
+()([ebrowse-ms "_strategy" () 0 () "  Strategy* _strategy;" 207 0  () () 0]
+[ebrowse-ms "_tab" () 0 () "  PlainArray _tab;" 184 0  () () 0]
+)
+([ebrowse-ms "PerlinNoise" () 0 () "  PerlinNoise(int* sizes, int dimension);" 234 0  () "inNoise::PerlinNoise(int* sizes, int dimension):" 99]
+[ebrowse-ms "blank_noise" () 0 () "  double blank_noise(int" 283 0  () "double PerlinNoise::blank_noise(int" 231]
+[ebrowse-ms "display" () 0 () "  void display()" 378 0  () "void PerlinNoise::display()" 622]
+[ebrowse-ms "execute" () 0 () "  void execute()" 396 0  () "void PerlinNoise::execute()" 1340]
+[ebrowse-ms "generate" () 0 () "  void generate()" 487 1  () "void PerlinNoise::generate()" 908]
+[ebrowse-ms "get_strategy" () 0 () "  Strategy get_strategy()" 360 0  () "Strategy PerlinNoise::get_strategy()" 569]
+[ebrowse-ms "set_strategy" () 0 () "  void set_strategy(Strategy" 322 0  () "void PerlinNoise::set_strategy(Strategy" 489]
+)
+()
+([ebrowse-ms "random" () 0 () "  static double random(int" 462 1  () "double PerlinNoise::random(int" 675]
+)
+()
+()
+()()
+][ebrowse-ts [ebrowse-cs "PlainArray" () 0"PlainArray.hpp" "class PlainArray{" 225"PlainArray.cpp" ]
+()([ebrowse-ms "_dimension" () 0 () "  int _dimension;" 330 1  () () 0]
+[ebrowse-ms "_sizes" () 0 () "  int* _sizes;" 268 1  () () 0]
+[ebrowse-ms "_tab" () 0 () "  double* _tab;" 253 1  () () 0]
+[ebrowse-ms "_totalSize" () 0 () "  int _totalSize;" 348 1  () () 0]
+)
+([ebrowse-ms "PlainArray" () 0 () "  PlainArray(int* sizes, int dimension);" 374 0  () "ainArray::PlainArray(int* sizes, int dimension):" 178]
+[ebrowse-ms "display" () 0 () "  void display()" 612 0  () "void PlainArray::display()" 1277]
+[ebrowse-ms "get_cell" () 0 () "  double get_cell(int" 458 0  () "double PlainArray::get_cell(int" 636]
+[ebrowse-ms "get_cell" () 0 () "  double get_cell(int" 420 0  () "double PlainArray::get_cell(int" 503]
+[ebrowse-ms "get_cell_number" () 0 () "  int get_cell_number(int" 764 1  () "int PlainArray::get_cell_number(int" 823]
+[ebrowse-ms "get_coordinates" () 0 () "  int* get_coordinates(int" 679 0  () "int* PlainArray::get_coordinates(int" 1496]
+[ebrowse-ms "get_dimension" () 0 () "  int get_dimension()" 542 0  () "int PlainArray::get_dimension()" 1101]
+[ebrowse-ms "get_size" () 0 () "  int get_size(int" 562 0  () "int PlainArray::get_size(int" 1155]
+[ebrowse-ms "get_total_size" () 0 () "  int get_total_size()" 594 0  () "int PlainArray::get_total_size()" 1225]
+[ebrowse-ms "set_cell" () 0 () "  void set_cell(int" 491 0  () "void PlainArray::set_cell(int" 709]
+)
+()
+()
+()
+()
+()()
+][ebrowse-ts [ebrowse-cs "Strategy" () 0"Strategy.hpp" "class Strategy{" 84"Strategy.cpp" ]
+([ebrowse-ts [ebrowse-cs "Strategy1D" () 0"Strategy.hpp" "class Strategy1D :" 157"Strategy.cpp" ]
+([ebrowse-ts [ebrowse-cs "StrategyCosine" () 0"Strategy.hpp" "class StrategyCosine :" 516"Strategy.cpp" ]
+()()
+([ebrowse-ms "interpolate" () 1 () "  virtual double interpolate(double" 583 1  () "double StrategyCosine::interpolate(double" 1397]
+)
+()
+()
+()
+()
+()()
+][ebrowse-ts [ebrowse-cs "StrategyLinear" () 0"Strategy.hpp" "class StrategyLinear :" 378"Strategy.cpp" ]
+()()
+([ebrowse-ms "interpolate" () 1 () "  virtual double interpolate(double" 445 1  () "double StrategyLinear::interpolate(double" 1285]
+)
+()
+()
+()
+()
+()()
+])()
+([ebrowse-ms "execute" () 1 () "  virtual bool execute(PlainArray" 217 0  () "bool Strategy1D::execute(PlainArray" 675]
+[ebrowse-ms "interpolate" () 9 () "  virtual double interpolate(double" 320 1  () () 0]
+[ebrowse-ms "smooth_noise" () 0 () "  double smooth_noise(double" 280 1  () "double Strategy1D::smooth_noise(double" 1080]
+)
+()
+()
+()
+()
+()()
+])()
+([ebrowse-ms "execute" () 1 () "  virtual bool execute(PlainArray" 127 0  () "bool Strategy::execute(PlainArray" 140]
+)
+()
+()
+()
+()
+()()
+][ebrowse-ts [ebrowse-cs "*Globals*" () 0() () 0"Generator.hpp" ]
+()()
+([ebrowse-ms "main" () 0 "testPlainArray3D.cpp" "int main(int" 59 0  "testStrategy.cpp" "int main(int" 109]
+[ebrowse-ms "main" () 0 "testGenerator.cpp" "int main()" 80 0  "testGenerator.cpp" "int main()" 80]
+)
+()
+()
+([ebrowse-ms "GENERATOR_HPP" () 512 () () 0 0  () "#define GENERATOR_HPP
+" 44]
+[ebrowse-ms "PLAINARRAY_HPP" () 512 () () 0 0  "PlainArray.hpp" "#define PLAINARRAY_HPP
+" 46]
+[ebrowse-ms "STRATEGY_HPP" () 512 () () 0 0  "Strategy.hpp" "#define STRATEGY_HPP
+" 42]
+)
+()
+()()
+]

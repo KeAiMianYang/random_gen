@@ -1,0 +1,18 @@
+_tab : double*
+_size : int*
+
+for a 1 dim array:
+
+for i
+    _tab+(sizeof(double) * i)
+
+for a 2 dim array:
+
+for i, j
+    _tab + sizeof(double)*j + sizeof(double)*i*j
+
+for a 3 dim array:
+
+for i, j, k
+    { U1 = SIZE*x1
+    { Un+1 = Un + SIZE*(xn!).size*xn+1

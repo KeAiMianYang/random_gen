@@ -1,0 +1,7 @@
+//TODO: find a way to use PerlinNoise & co in Strategy & co
+//SOLUTION1: using namespaces, with two headers, one "hidden" containing _tab and _size, they will be publics but hidden from the public
+//SOLUTION2: using pointers in methods:
+// http://stackoverflow.com/questions/13844129/friend-class-with-inheritance
+//SOLUTION3: redo everything: _tab is a double*, size is an int*, friends will work on a virtual method and inheritance
+
+//TODO: manage problem of null reference in PerlinNoise::PerlinNoise() & co

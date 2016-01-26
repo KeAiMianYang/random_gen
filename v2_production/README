@@ -1,0 +1,4 @@
+BUGS:
+	in PerlinNoise, Strategy::execute() is called, not Strategy1D::execute()
+	in StrategyLinear, difference tends to be too small to be seen, needs a bug factor to see the difference
+	in StrategyCosine, c always == 0, so returns a

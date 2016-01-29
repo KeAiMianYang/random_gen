@@ -1,4 +1,5 @@
 
+
 #include "Generator.hpp"
 #include "Strategy.hpp"
 #include <iostream>

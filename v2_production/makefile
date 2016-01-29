@@ -4,11 +4,17 @@ main: Main.o Generator.o PlainArray.o Strategy.o
 testSetRange: testChangeRange.o Generator.o Strategy.o PlainArray.o
 	g++ testChangeRange.o Generator.o Strategy.o PlainArray.o -o testSetRange
 
+testConvert: testConvert.o PlainArray.o
+	g++ testConvert.o PlainArray.o -o testConvert
+
 objects: Generator.cpp PlainArray.cpp Strategy.cpp
 	make Generator Strategy PlainArray
 
 Main: Main.c PlainArray.hpp Generator.hpp Strategy.hpp
 	g++ Main.cpp -c
+
+testConvert.o: testConvert.cpp PlainArray.hpp
+	g++ testConvert.cpp -c
 
 testChangeRange.o: testChangeRange.cpp Generator.hpp PlainArray.hpp Strategy.hpp
 	g++ testChangeRange.cpp -c

@@ -45,6 +45,9 @@ class PlainArray{
   // TO IMPROVE WITH get_coordinates()
   int* get_coordinates(int cellNumber);
   // TO IMPROVE WITH io parameter
+  int* convert_one_dim();
+  int** convert_two_dim();
+  int*** convert_three_dim();
  protected:
   int get_cell_number(int* coordinates);
 };

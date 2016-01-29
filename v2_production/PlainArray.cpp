@@ -80,3 +80,46 @@ int* PlainArray::get_coordinates(int cellNumber){
   //  std::cout << "out of get_coordinates()" << std::endl;
   return coordinates;
 }
+
+int* PlainArray::convert_one_dim(){
+  int* output = (int*) malloc(sizeof(int)*_sizes[0]);
+  for(int i=0 ; i<_sizes[0] ; ++i){
+    output[i] = (int) get_cell(i);
+  }
+  return output;
+}
+
+int** PlainArray::convert_two_dim(){
+  int** output = (int**) malloc(sizeof(int*)*_sizes[0]);
+  int* tmp = (int*) malloc(sizeof(int)*_sizes[1]);
+  int* dim = (int*) malloc(sizeof(int)*_dimension);
+  for(int i=0 ; i<_sizes[0] ; ++i){
+    dim[0] = i;
+    for(int j=0 ; j<_sizes[1] ; ++j){
+      dim[1] = j;
+      tmp[j] = (int) get_cell(dim);
+    }
+    output[i] = tmp;
+  }
+  return output;
+}
+
+int*** PlainArray::convert_three_dim(){
+  int*** output = (int***) malloc(sizeof(int**)*_sizes[0]);
+  int** tmp = (int**) malloc(sizeof(int*)*_sizes[1]);
+  int* tmp2 = (int*) malloc(sizeof(int)*_sizes[2]);
+  int* dim = (int*) malloc(sizeof(int)*_dimension);
+  for(int i=0 ; i<_sizes[0] ; ++i){
+    dim[0] = i;
+    for(int j=0 ; j<_sizes[1] ; ++j){
+      dim[1] = j;
+      for(int k=0 ; k<_sizes[2] ; ++k){
+	dim[2] = k;
+	tmp2[k] = get_cell(dim);
+      }
+      tmp[j] = tmp2;
+    }
+    output[i] = tmp;
+  }
+  return output;
+}

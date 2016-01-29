@@ -82,6 +82,7 @@ int* PlainArray::get_coordinates(int cellNumber){
 }
 
 int* PlainArray::convert_one_dim(){
+  if(_dimension != 1) return NULL;
   int* output = (int*) malloc(sizeof(int)*_sizes[0]);
   for(int i=0 ; i<_sizes[0] ; ++i){
     output[i] = (int) get_cell(i);
@@ -90,6 +91,7 @@ int* PlainArray::convert_one_dim(){
 }
 
 int** PlainArray::convert_two_dim(){
+  if(_dimension != 2) return NULL;
   int** output = (int**) malloc(sizeof(int*)*_sizes[0]);
   int* tmp = (int*) malloc(sizeof(int)*_sizes[1]);
   int* dim = (int*) malloc(sizeof(int)*_dimension);
@@ -105,6 +107,7 @@ int** PlainArray::convert_two_dim(){
 }
 
 int*** PlainArray::convert_three_dim(){
+  if(_dimension != 3) return NULL;
   int*** output = (int***) malloc(sizeof(int**)*_sizes[0]);
   int** tmp = (int**) malloc(sizeof(int*)*_sizes[1]);
   int* tmp2 = (int*) malloc(sizeof(int)*_sizes[2]);

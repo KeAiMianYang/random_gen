@@ -10,14 +10,14 @@ class Strategy;
 #include "PlainArray.hpp"
 #include "Strategy.hpp"
 
-class PerlinNoise{
+class Generator{
 public: // TODO: set as protected
   PlainArray _tab;
   Strategy* _strategy;
   double _middle;
   double _range;
  public:
-  PerlinNoise(int* sizes, int dimension); //!< Create an array according to the sizes given, then generate the numbers
+  Generator(int* sizes, int dimension); //!< Create an array according to the sizes given, then generate the numbers
   double blank_noise(int* values);
   void set_strategy(Strategy& strategy);
   Strategy get_strategy();

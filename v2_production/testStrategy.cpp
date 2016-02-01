@@ -6,8 +6,8 @@
 
 int main(int argc, char** argv){
   int sizes[] = {6};
-  PerlinNoise perlin(sizes, 1);
-  PerlinNoise perlin2(sizes, 1);
+  Generator perlin(sizes, 1);
+  Generator perlin2(sizes, 1);
   perlin.display();
   StrategyCosine* c = new StrategyCosine;
   perlin.set_strategy(*(c)); // has to "cast" pointer into reference
@@ -15,7 +15,7 @@ int main(int argc, char** argv){
   std::cout << "StrategyCosine" << std::endl;
   perlin.display();
   
-  PerlinNoise perlin3(sizes, 1);
+  Generator perlin3(sizes, 1);
   StrategyLinear* d = new StrategyLinear;
   perlin3.set_strategy(*(d));
   perlin3.execute();

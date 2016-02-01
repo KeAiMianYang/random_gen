@@ -18,6 +18,8 @@ testConvert.o: testConvert.cpp PlainArray.hpp
 
 testChangeRange.o: testChangeRange.cpp Generator.hpp PlainArray.hpp Strategy.hpp
 	g++ testChangeRange.cpp -c
+PerlinNoise.o: PerlinNoise.cpp PerlinNoise.hpp Generator.hpp Strategy.hpp PlainArray.hpp
+	g++ PerlinNoise.cpp -c
 
 Generator.o: Generator.cpp Generator.hpp Strategy.hpp PlainArray.hpp
 	g++ Generator.cpp -c

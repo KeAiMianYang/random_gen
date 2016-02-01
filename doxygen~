@@ -1,0 +1,28 @@
+//! Simple Description
+/// idem
+/*! \brief Simple Description
+    still simple description
+*/
+
+/*! Multiligne Description*/
+/** idem*/
+///
+/// idem
+///
+//!
+//! idem
+//!
+
+/**
+@param unParam
+*/
+/*!
+\param unParam
+*/
+
+param unParam describes a parameter
+return aValue describes the returned value
+def aDefine describes a define
+var aVar describes an attribute/variable
+fn int aFunction() describes a function
+file aFile describes the file

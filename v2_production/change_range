@@ -1,29 +1,5 @@
-newRange = (max-min)/2
-newMiddle = min + newRange
-(tab/(_range/newRange))+(newMiddle-_middle)
+oldMin, oldMax, newMin, newMax
 
-=======
+diff = (newMax - newMin) / (oldMax - oldMin)
 
-_range = 1
-_middle = 0
-
-min = 0
-max = 1
-=>
-newRange = 0.5
-newMiddle = 0.5
-
-(tab/(1/0.5))+0.5
-
-====
-
-_range = 2
-_middle = 0.5
-
-min = 1
-max = 11
-
-newRange = 5
-newMiddle = 6
-
-(tab/(2/5))+(6-0.5)
+fixed = (val - oldMin) * diff + newMin

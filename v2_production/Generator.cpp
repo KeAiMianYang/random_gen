@@ -4,7 +4,7 @@
 
 
 Generator::Generator(int* sizes, int dimension):
-  _tab(sizes, dimension), _strategy(new Strategy), _middle(0), _range(1){
+  _tab(sizes, dimension), _strategy(new Strategy), _min(-1), _max(1){
   
   generate(); 
 }
@@ -26,11 +26,16 @@ Strategy Generator::get_strategy(){
   return *_strategy;
 }
 
+PlainArray* Generator::get_array(){
+  return &_tab;
+}
+
 void Generator::display(){
   _tab.display();
 }
 
 void Generator::set_range(int min, int max){
+  /*
   // assert max > min
   double newRange = (max - min)/2;
   std::cout << newRange << std::endl;
@@ -42,6 +47,11 @@ void Generator::set_range(int min, int max){
   }
   _range = newRange;
   _middle = newMiddle;  
+*/
+  double diff = (max - min) / (_max - _min);
+  for(int i=0 ; i<_tab.get_total_size() ; ++i){
+    _tab.set_cell(i, (_tab.get_cell(i) - -min) * diff + min);
+  }
 }
 
 double Generator::random(int seed){

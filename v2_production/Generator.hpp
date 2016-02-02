@@ -14,8 +14,8 @@ class Generator{
 public: // TODO: set as protected
   PlainArray _tab;
   Strategy* _strategy;
-  double _middle;
-  double _range;
+  double _min;
+  double _max;
  public:
   Generator(int* sizes, int dimension); //!< Create an array according to the sizes given, then generate the numbers
   double blank_noise(int* values);
@@ -24,6 +24,7 @@ public: // TODO: set as protected
   void display();
   void execute();
   void set_range(int min, int max); // TO TEST
+  PlainArray* get_array();
   //execute, for strategy
  protected:
   static double random(int seed);

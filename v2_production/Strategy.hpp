@@ -2,6 +2,8 @@
 #define STRATEGY_HPP
 #include "PlainArray.hpp"
 
+namespace RandomMapEngine {
+
 class Strategy{
  public:
   virtual bool execute(PlainArray& tab);
@@ -27,5 +29,6 @@ class StrategyCosine : public Strategy1D{
   virtual double interpolate(double a, double b, double factor);
   //not tested
 };
+}
 
 #endif

@@ -2,6 +2,8 @@
 #include "Generator.hpp"
 #include "Strategy.hpp"
 
+using namespace RandomMapEngine;
+
 int main(){
   int sizes[] = {3, 2};
   int dimension = 2;

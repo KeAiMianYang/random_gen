@@ -8,6 +8,8 @@
     { Un+1 = Un + SIZE * (xn!).size * xn+1
 */
 
+using namespace RandomMapEngine;
+
 PlainArray::PlainArray(int* sizes, int dimension): _sizes(sizes), _dimension(dimension){
   int sizeArray = 1;
   for(int i=0 ; i<dimension ; ++i){

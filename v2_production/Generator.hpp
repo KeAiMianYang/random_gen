@@ -5,6 +5,8 @@
   \file Generator.hpp
   \brief Generator of a Perlin Noise
  */
+namespace RandomMapEngine{
+
 class Strategy;
 
 #include "PlainArray.hpp"
@@ -31,5 +33,7 @@ public: // TODO: set as protected
   void generate(); // TO TEST
   //TO IMPROVE, useless memory allocation
 };
+
+}
 
 #endif

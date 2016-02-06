@@ -1,6 +1,8 @@
 #include "PlainArray.hpp"
 #include <iostream>
 
+using namespace RandomMapEngine;
+
 int main(int argc,  char ** argv){
   int s[] = {2, 4, 3};
   int d = 3;

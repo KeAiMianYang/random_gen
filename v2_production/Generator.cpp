@@ -2,6 +2,7 @@
 #include "Strategy.hpp"
 #include <iostream>
 
+using namespace RandomMapEngine;
 
 Generator::Generator(int* sizes, int dimension):
   _tab(sizes, dimension), _strategy(new Strategy), _min(-1), _max(1){

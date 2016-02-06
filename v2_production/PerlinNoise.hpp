@@ -1,7 +1,7 @@
 #ifndef PERLINNOISE_HPP
 #define PERLINNOISE_HPP
 
-
+namespace RadomMapEngine {
 
 class Strategy;
 class PlainArray;
@@ -18,4 +18,5 @@ static float** convert_two_dim(PlainArray* plainArray);
 static float*** convert_three_dim(PlainArray* plainArray);
 };
 
+}
 #endif

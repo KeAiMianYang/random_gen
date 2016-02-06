@@ -13,6 +13,7 @@ std::copy(std::begin(sizes), std::end(sizes), std::begin(_tab);
   \file PlainArray.hpp
   \brief A class representing an array the same way no matter it's dimension
  */
+namespace {
 
 class PlainArray{
  protected:
@@ -51,6 +52,7 @@ class PlainArray{
  protected:
   int get_cell_number(int* coordinates);
 };
+}
 
 /*
 TESTED FOR 1D, 2D, 3D

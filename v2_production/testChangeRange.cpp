@@ -4,6 +4,8 @@
 #include "Strategy.hpp"
 #include "PlainArray.hpp"
 
+using namespace RandomMapEngine;
+
 int main(int argc, char ** argv){
   int s[] = {3, 2};
   Generator p(s, 2);

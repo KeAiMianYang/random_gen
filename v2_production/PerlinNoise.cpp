@@ -6,6 +6,8 @@
 
 #include <cstdlib>
 
+using namespace RandomMapEngine;
+
 PlainArray* PerlinNoise::generate_perlinNoise(Strategy* strategy, int min, int max, int dimension, int* sizes){ // needs to include a library
   Generator g(sizes, dimension);
   g.set_range(min, max);

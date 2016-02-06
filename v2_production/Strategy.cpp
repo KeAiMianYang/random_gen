@@ -4,6 +4,8 @@
 #include <cmath>
 #include <cstdlib>
 
+using namespace RandomMapEngine;
+
 bool Strategy::execute(PlainArray& tab){
   std::cout << "ERROR: I AM EXECUTED" << std::endl;
 }

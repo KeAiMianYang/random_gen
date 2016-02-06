@@ -52,7 +52,6 @@ void Generator::set_range(int min, int max){
   for(int i=0 ; i<_tab.get_total_size() ; ++i){
     _tab.set_cell(i, (_tab.get_cell(i) - -min) * diff + min);
   }
-  std::cout << "i" << << std::endl;
 }
 
 double Generator::random(int seed){
